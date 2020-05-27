@@ -1,38 +1,136 @@
-.App {
-  text-align: center;
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+html,body,#root {
+  height: 100%;
+  background-image: linear-gradient(to bottom right, #000000, #E056FD); 
+  background-repeat: no-repeat;
+  overflow: hidden;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.app {
+ display: flex;
+ height: 100%;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
+.todo-list {
+  max-width: 400px;
+  width: 100%;
+  max-height: 100%;
+  padding: 30px 0px;
+  margin: 0px auto;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  text-align: center;
+  
 }
 
-.App-link {
-  color: #61dafb;
+.title {
+  background-image: linear-gradient(to bottom right, #C797EB, #F0ECFC);
+  font-size: 51px;
+  font-weight: 700;
+  text-shadow: 2px 4px rgba(50, 50, 75, 0.5);
+  width: 100%;
+  padding: 20px 0px;
+  margin-bottom: 20px;
+  background-color: seashell;
+  border-radius: 10px;
+  box-shadow: 5px 10px rgba(0, 0, 0, 0.5);
+
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.input-form {
+  width: 100%;
+  margin-bottom: 40px;
+}
+
+.input-form .input-box {
+  width: 50%;
+  display: block;
+  font-size: large;
+  padding: 10px 20px;
+  border-radius: 10px;
+  border-style: none;
+  outline: none;
+  appearance: none;
+  background: none;
+  background-color: rgba(255, 255, 255, 0.5);
+  box-shadow: 3px 6px rgba(0,0,0,0.5);
+  color: #000000;
+  margin: auto;
+  font-weight: 400;
+  font-style: italic;
+  transition: 0.4s ease;
+}
+
+.input-form .input-box:focus {
+  width: 100%;
+  background-color: rgba(255,255,255,0.9);
+
+}
+
+.todos {
+  height: 500px;
+  overflow-y: auto;
+  margin: 0 auto;
+
+}
+
+ul {
+  list-style-type: none;
+}
+
+.todo {
+  display: flex;
+  width: 95%;
+  justify-content: flex-start;
+  align-items: baseline;
+  padding: 10px 20px;
+  margin-bottom: 20px;
+  border-radius: 0 15px 15px 15px;
+  background-color: #7f78d2;
+  position: relative;
+  transition: 0.5s ease;
+}
+
+.todo:hover {
+  width: 100%;
+  box-shadow: 3px 6px rgba(0, 0, 0, 0.5);
+  background-color: rgba(255,255,255,0.9);
+}
+
+.check-box {
+  width: 20px;
+  height: 20px;
+  margin-right: 20px;
+  box-shadow: 2px 4px rgba(50, 50, 75, 0.5);
+  border: none;
+}
+
+li {
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.remove-todo {
+  margin-left: 20px;
+  width: 27px;
+  align-self: center;
+  border-radius: 50%;
+  border: none;
+  padding: 5px;
+  background-color: red;
+  color: #FFF;
+  position: absolute;
+  right: 20px;
+  font-weight: 700;
+  font-size: 15px;
+  box-shadow: 2px 4px rgba(0, 0, 0, 0.5);
+  outline: none;
+}
+
+.done {
+  text-decoration: line-through;
 }
